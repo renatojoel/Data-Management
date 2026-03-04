@@ -8,6 +8,7 @@ def clean_text(text):
     text = text.lower()
     text = re.sub(r"http\S+", "", text)
     text = re.sub(r"[^\w\s@#]", "", text)
+    text = re.sub(r"&amp;", "", text)
     return text
 
 # 2. Extract hashtags and mentions
